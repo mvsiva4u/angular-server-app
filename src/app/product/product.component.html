@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Products
+    </div>
+    <div class="panel-body">
+ <table class="table table-bordered" *ngIf="products && products.length"> 
+     <tr>
+          <th></th>
+         <th>Name</th>
+         <th>Product Code</th>
+         <th>Product date</th>
+         <th>Price</th>
+     </tr>
+     <tr *ngFor="let product of products">
+         <td>
+        <img [src]="product.imageUrl" style="width: 50px;"/>
+        </td>
+         <td>{{product.productName}}</td>
+         <td>{{product.productCode}}</td>
+         <td>{{product.releaseDate}}</td>
+         <td>{{product.price}}</td>
+     </tr>
+
+ </table>
+    </div>
+</div>
